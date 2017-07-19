@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    background: url("./img/bg2bg.jpg");
+}
+.content {
+  display: grid;
+  grid-template-columns: 15%, 60%, 15%;
+  grid-gap: 10px;
+  color: #fff;
+  grid-template-areas: 
+  "... ... ..."
+  "... header ..."
+  "... body ...";
+}
+
+.yesno {
+    grid-area: header;
+    margin-top: 300px;
+    text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3em;
+    background-color: #111;
+    padding: 10px;
+    margin-bottom: -10px;
+}
+
+.excuse {
+    grid-area: body;
+    text-align: right;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2em;
+    background-color: #111;
+    padding: 10px;
+    margin-top: 0;
+}
