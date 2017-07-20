@@ -1,10 +1,17 @@
+/* -------- defaults ----------- */
 body {
     margin: 0;
-    background: url("./img/bg2bg.jpg");
+    background: url("./img/bg2bg.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height : 100vh;
+    width : 100%;
 }
 .content {
   display: grid;
-  grid-template-columns: 15%, 60%, 15%;
+  grid-template-columns: 10% 80% 10%;
   grid-gap: 10px;
   color: #fff;
   grid-template-areas: 
@@ -15,7 +22,7 @@ body {
 
 .yesno {
     grid-area: header;
-    margin-top: 300px;
+    margin-top: 150px;
     text-align: left;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3em;
@@ -33,4 +40,72 @@ body {
     background-color: #111;
     padding: 10px;
     margin-top: 0;
+}
+
+
+/* --------- smartphone ----------- */ 
+@media screen and (max-width: 767px) { 
+    .content {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "header"
+        "body";
+    }
+    .yesno {
+        margin-top: 150px;
+        font-size: 2em;
+        padding: 10%;
+    }
+    .excuse {
+        padding: 10%;
+        margin-top: 0;
+    }    
+} 
+
+/* -------- tablets----------- */ 
+@media screen and (min-width: 768px) { 
+    .content {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "header"
+        "body";
+    }
+    .yesno {
+        margin-top: 150px;
+        font-size: 2em;
+        padding: 10%;
+    }
+    .excuse {
+        padding: 10%;
+        margin-top: 0;
+    }
+} 
+
+/* --------- small desktop screen ------------- */ 
+@media screen and (min-width: 1024px) { 
+    .content {
+        grid-template-columns: 10% 80% 10%;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "... ... ..."
+        "... header ..."
+        "... body ...";
+    }
+    .yesno {
+        margin-top: 150px;
+    }
+} 
+
+/* --------- large desktop screen ------------- */ 
+@media screen and (min-width: 1280px) { 
+    .yesno {
+        margin-top: 150px;
+    }
+}
+
+/* --------- large desktop screen ------------- */ 
+@media screen and (min-width: 1920px) { 
+    .yesno {
+        margin-top: 250px;
+    }
 }
